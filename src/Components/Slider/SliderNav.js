@@ -5,12 +5,16 @@ const SliderNav = ({ setSlide, slide, slidesList }) => {
   function handlePrev() {
     if (slide > 0) {
       setSlide(slide - 1);
+    } else {
+      setSlide(slidesList.length - 1);
     }
   }
 
   function handleNext() {
     if (slide < slidesList.length - 1) {
       setSlide(slide + 1);
+    } else {
+      setSlide(0);
     }
   }
 

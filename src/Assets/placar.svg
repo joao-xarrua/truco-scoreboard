@@ -1,0 +1,53 @@
+<svg
+        width="72"
+        height="72"
+        viewBox="0 0 72 72"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <mask
+          id="mask0_31_61"
+          style={{ maskType: "luminance" }}
+          maskUnits="userSpaceOnUse"
+          x="4"
+          y="7"
+          width="64"
+          height="55">
+          <path
+            d="M61.5 18H10.5C8.01472 18 6 20.0147 6 22.5V55.5C6 57.9853 8.01472 60 10.5 60H61.5C63.9853 60 66 57.9853 66 55.5V22.5C66 20.0147 63.9853 18 61.5 18Z"
+            fill="white"
+            stroke="white"
+            strokeWidth="2.66667"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21 9V18M51 9V18"
+            stroke="white"
+            strokeWidth="2.66667"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15.3405 36L22.5 28.5255V49.5M36 18V60"
+            stroke="black"
+            strokeWidth="2.66667"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M51 49.5C53.4853 49.5 55.5 44.799 55.5 39C55.5 33.201 53.4853 28.5 51 28.5C48.5147 28.5 46.5 33.201 46.5 39C46.5 44.799 48.5147 49.5 51 49.5Z"
+            stroke="black"
+            strokeWidth="2.66667"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M31.5 18H40.5M31.5 60H40.5"
+            stroke="white"
+            strokeWidth="2.66667"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </mask>
+        <g mask="url(#mask0_31_61)">
+          <path d="M0 0H72V72H0V0Z" fill="#333333" />
+        </g>
+      </svg>

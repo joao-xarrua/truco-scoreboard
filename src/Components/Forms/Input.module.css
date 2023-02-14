@@ -1,0 +1,46 @@
+.input {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 12rem;
+  padding: 0 10px;
+}
+
+.label label {
+  font-family: var(--type-second);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.label p {
+  font-family: var(--type-first);
+  font-size: 0.6rem;
+  margin-top: 10px;
+}
+
+.input input {
+  flex: 1;
+  max-width: 23rem;
+  font-size: 1rem;
+  padding: 5px 10px;
+  height: 3.2rem;
+  border-radius: 5px;
+  border: 2px solid #333;
+  background: #eee;
+}
+
+.input input:focus,
+.input input:hover {
+  background: #d7d7d7;
+  outline: none;
+  box-shadow: 0px 0px 0px 3px rgba(215, 215, 215, 0.8);
+}
