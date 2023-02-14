@@ -1,0 +1,7 @@
+.wrap {
+  background: rgb(199, 183, 215);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}

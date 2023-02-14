@@ -1,0 +1,27 @@
+.slider {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.item {
+  min-width: 100%;
+  background: url("../../Assets/slide1.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem;
+  transition: 0.8s;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.6);
+  font-family: var(--type-first);
+  color: #fff;
+  padding: 40px;
+  border-radius: 0.5rem;
+}

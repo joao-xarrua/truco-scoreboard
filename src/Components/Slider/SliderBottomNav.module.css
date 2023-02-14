@@ -1,0 +1,21 @@
+.bottomNav {
+  height: 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomNav a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #eee;
+  margin: 0 2px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.bottomNav a:hover {
+  background: #4f772d;
+  cursor: pointer;
+}
