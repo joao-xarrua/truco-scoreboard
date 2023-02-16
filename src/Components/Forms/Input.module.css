@@ -38,6 +38,10 @@
   background: #eee;
 }
 
+.input input:disabled {
+  background: #d7d7d7;
+}
+
 .input input:focus,
 .input input:hover {
   background: #d7d7d7;
