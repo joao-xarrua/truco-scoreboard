@@ -5,19 +5,26 @@ import style from "./DisplayForm.module.css";
 const DisplayForm = () => {
   const [modoDeJogo, setModoDeJogo] = React.useState("padrao");
 
+  function handleClick(event) {
+    event.preventDefault();
+    setModoDeJogo(event.target.id);
+  }
+
   return (
     <form className={style.form}>
       <div className={style.modeSelect}>
         <span>modo de jogo</span>
         <div className={style.modeInput}>
           <button
+            id="padrao"
             className={modoDeJogo === "padrao" ? style.active : ""}
-            onClick={() => setModoDeJogo("padrao")}>
+            onClick={handleClick}>
             Padrão
           </button>
           <button
+            id="personalizado"
             className={modoDeJogo === "personalizado" ? style.active : ""}
-            onClick={() => setModoDeJogo("personalizado")}>
+            onClick={handleClick}>
             Personalizado
           </button>
         </div>
