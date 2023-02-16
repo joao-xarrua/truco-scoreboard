@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Input.module.css";
 
-const Input = ({ name, label, text, children }) => {
+const Input = ({ name, label, text, children, value, onChange, disabled }) => {
   return (
     <div className={style.input}>
       {children}
@@ -9,7 +9,17 @@ const Input = ({ name, label, text, children }) => {
         <label htmlFor={name}>{label}</label>
         <p>{text}</p>
       </div>
-      <input type="text" id={name} />
+      {disabled ? (
+        <input
+          type="text"
+          id={name}
+          value={value}
+          onChange={onChange}
+          disabled
+        />
+      ) : (
+        <input type="text" id={name} value={value} onChange={onChange} />
+      )}
     </div>
   );
 };

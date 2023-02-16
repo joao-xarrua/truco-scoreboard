@@ -3,15 +3,33 @@ import Input from "../Forms/Input";
 import style from "./DisplayForm.module.css";
 
 const DisplayForm = () => {
-  const [modoDeJogo, setModoDeJogo] = React.useState("padrao");
+  const [modoDeJogo, setModoDeJogo] = React.useState(null);
+  const [totalDePontos, setTotalDePontos] = React.useState(0);
+  const [equipeUm, setEquipeUm] = React.useState("");
+  const [equipeDois, setEquipeDois] = React.useState("");
 
   function handleClick(event) {
     event.preventDefault();
     setModoDeJogo(event.target.id);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  React.useEffect(() => {
+    const modoInicial = window.localStorage.getItem("modoDeJogo");
+    if (modoInicial !== null) setModoDeJogo(modoInicial);
+  }, []);
+
+  React.useEffect(() => {
+    if (modoDeJogo !== null) {
+      window.localStorage.setItem("modoDeJogo", modoDeJogo);
+    }
+  }, [modoDeJogo]);
+
   return (
-    <form className={style.form}>
+    <form onSubmit={handleSubmit} className={style.form}>
       <div className={style.modeSelect}>
         <span>modo de jogo</span>
         <div className={style.modeInput}>
@@ -28,12 +46,16 @@ const DisplayForm = () => {
             Personalizado
           </button>
         </div>
+        {modoDeJogo}
       </div>
       <div className={style.inputs}>
         <Input
           name="totalDePontos"
           label="Total de pontos"
-          text="Defina a quantidade de pontos necessários para finalizar o jogo">
+          text="Defina a quantidade de pontos necessários para finalizar o jogo"
+          value={modoDeJogo === "padrao" ? 12 : totalDePontos}
+          onChange={(event) => setTotalDePontos(event.target.value)}
+          disabled={modoDeJogo === "padrao" ? true : false}>
           <svg
             width="72"
             height="72"
@@ -91,7 +113,10 @@ const DisplayForm = () => {
         <Input
           name="equipe1"
           label="Equipe 1"
-          text="Defina o nome da primeira equipe">
+          text="Defina o nome da primeira equipe"
+          value={modoDeJogo === "padrao" ? "Nós" : equipeUm}
+          onChange={(event) => setEquipeUm(event.target.value)}
+          disabled={modoDeJogo === "padrao" ? true : false}>
           <svg
             width="72"
             height="72"
@@ -111,7 +136,10 @@ const DisplayForm = () => {
         <Input
           name="equipe2"
           label="Equipe 2"
-          text="Defina o nome da segunda equipe">
+          text="Defina o nome da segunda equipe"
+          value={modoDeJogo === "padrao" ? "Eles" : equipeDois}
+          onChange={(event) => setEquipeDois(event.target.value)}
+          disabled={modoDeJogo === "padrao" ? true : false}>
           <svg
             width="72"
             height="72"
