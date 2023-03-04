@@ -1,0 +1,110 @@
+.wrap {
+  background: #333;
+  width: 25rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.interface {
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  z-index: 1000;
+}
+
+.navegacaoTopo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navegacaoTopo button {
+  font-family: var(--type-first);
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navegacaoTopo button:hover {
+  text-decoration: underline;
+}
+
+.valores {
+  background: #eee;
+  padding: 14px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.valores h2 {
+  color: #555;
+  font-size: 0.875rem;
+}
+
+.valores ul {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.valores button {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #eee;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.valores button:hover,
+.valores button.ativo {
+  color: #eee;
+  border: none;
+  background: #4f772d;
+  box-shadow: 0px 0px 0px 3px rgb(79 119 45 / 60%);
+}
+
+.adicionaPontos {
+  background: #eee;
+  padding: 14px 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.adicionaPontos h2 {
+  color: #555;
+  font-size: 0.875rem;
+}
+
+.adicionaPontos .botoesPontos {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.adicionaPontos .botoesPontos button {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 5px;
+  border: none;
+  background: #4f772d;
+  color: #eee;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.adicionaPontos .botoesPontos button:hover {
+  box-shadow: 0px 0px 0px 3px rgb(79 119 45 / 60%);
+}

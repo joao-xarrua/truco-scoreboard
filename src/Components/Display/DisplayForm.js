@@ -1,30 +1,62 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../GlobalContext";
 import Input from "../Forms/Input";
 import style from "./DisplayForm.module.css";
 
 const DisplayForm = () => {
+  // estados para o formulário
   const [modoDeJogo, setModoDeJogo] = React.useState(null);
   const [totalDePontos, setTotalDePontos] = React.useState(0);
   const [equipeUm, setEquipeUm] = React.useState("");
   const [equipeDois, setEquipeDois] = React.useState("");
+  // estados globais
+  const {
+    setJogoAcontecendo,
+    setTotalDePontosGlobal,
+    setEquipeUmGlobal,
+    setEquipeDoisGlobal,
+  } = React.useContext(GlobalContext);
+  // router do navigate
+  const navigate = useNavigate();
 
+  // funcao de toggle do radio de modo de jogo
   function handleClick(event) {
     event.preventDefault();
     setModoDeJogo(event.target.id);
   }
 
+  //
   function handleSubmit(event) {
     event.preventDefault();
+    if (totalDePontos !== null && equipeUm !== "" && equipeDois !== "") {
+      // define os valores no contexto global
+      setTotalDePontosGlobal(totalDePontos);
+      setEquipeUmGlobal(equipeUm);
+      setEquipeDoisGlobal(equipeDois);
+      // inicia o jogo
+      setJogoAcontecendo(true);
+      // vai para rota /score
+      navigate("/score");
+    }
   }
 
+  // use effect apenas no inicio para pegar valor do local storage
+  // e definir o modo inicial
   React.useEffect(() => {
     const modoInicial = window.localStorage.getItem("modoDeJogo");
-    if (modoInicial !== null) setModoDeJogo(modoInicial);
+    modoInicial === null ? setModoDeJogo("padrao") : setModoDeJogo(modoInicial);
   }, []);
 
+  // atualiza local storage
   React.useEffect(() => {
     if (modoDeJogo !== null) {
       window.localStorage.setItem("modoDeJogo", modoDeJogo);
+    }
+    if (modoDeJogo === "padrao") {
+      setTotalDePontos(12);
+      setEquipeUm("Nós");
+      setEquipeDois("Eles");
     }
   }, [modoDeJogo]);
 
@@ -46,14 +78,13 @@ const DisplayForm = () => {
             Personalizado
           </button>
         </div>
-        {modoDeJogo}
       </div>
       <div className={style.inputs}>
         <Input
           name="totalDePontos"
           label="Total de pontos"
           text="Defina a quantidade de pontos necessários para finalizar o jogo"
-          value={modoDeJogo === "padrao" ? 12 : totalDePontos}
+          value={totalDePontos}
           onChange={(event) => setTotalDePontos(event.target.value)}
           disabled={modoDeJogo === "padrao" ? true : false}>
           <svg
@@ -114,7 +145,7 @@ const DisplayForm = () => {
           name="equipe1"
           label="Equipe 1"
           text="Defina o nome da primeira equipe"
-          value={modoDeJogo === "padrao" ? "Nós" : equipeUm}
+          value={equipeUm}
           onChange={(event) => setEquipeUm(event.target.value)}
           disabled={modoDeJogo === "padrao" ? true : false}>
           <svg
@@ -137,7 +168,7 @@ const DisplayForm = () => {
           name="equipe2"
           label="Equipe 2"
           text="Defina o nome da segunda equipe"
-          value={modoDeJogo === "padrao" ? "Eles" : equipeDois}
+          value={equipeDois}
           onChange={(event) => setEquipeDois(event.target.value)}
           disabled={modoDeJogo === "padrao" ? true : false}>
           <svg
