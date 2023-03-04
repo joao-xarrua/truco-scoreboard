@@ -6,7 +6,6 @@ import style from "./SliderBottomNav.module.css";
 const SliderBottomNav = ({ setSlide, slide, slidesList }) => {
   function handleClick({ target }) {
     setSlide(+target.id); // transformar para numero se não irá dar erro
-    console.log(target.id);
   }
   return (
     <div className={style.bottomNav}>

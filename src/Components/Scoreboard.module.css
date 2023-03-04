@@ -1,0 +1,12 @@
+.container {
+  background: #eee;
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
+  height: 80vh;
+  border-radius: 0.5rem;
+  box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}

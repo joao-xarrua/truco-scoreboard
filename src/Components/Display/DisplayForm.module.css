@@ -39,6 +39,7 @@
   padding: 14px 24px 12px 24px;
   border: none;
   cursor: pointer;
+  transition: 0.1s;
 }
 
 .modeInput button:hover {
@@ -70,5 +71,5 @@
 .submit:hover {
   background: #446527;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 1px #4f772d, 0px 0px 0px 3px rgba(79, 119, 45, 0.6);
+  box-shadow: 0px 0px 0px 3px rgba(79, 119, 45, 0.6);
 }
