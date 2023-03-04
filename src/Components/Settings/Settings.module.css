@@ -108,3 +108,35 @@
 .adicionaPontos .botoesPontos button:hover {
   box-shadow: 0px 0px 0px 3px rgb(79 119 45 / 60%);
 }
+
+.navegacaoBase {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navegacaoBase .resetar,
+.navegacaoBase .finalizar {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #eee;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.navegacaoBase .resetar {
+  background: #bba90f;
+}
+
+.navegacaoBase .finalizar {
+  background: #be1515;
+}
+
+.navegacaoBase .resetar:hover {
+  box-shadow: 0px 0px 0px 3px rgba(255, 247, 0, 0.435);
+}
+
+.navegacaoBase .finalizar:hover {
+  box-shadow: 0px 0px 0px 3px rgba(255, 0, 0, 0.6);
+}
