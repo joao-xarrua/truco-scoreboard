@@ -91,7 +91,10 @@ const Settings = ({ equipeUm, equipeDois, setEquipeUm, setEquipeDois }) => {
             </button>
           </div>
         </div>
-        <div className={style.navegacaoBase}></div>
+        <div className={style.navegacaoBase}>
+          <button className={style.resetar}>Resetar</button>
+          <button className={style.finalizar}>Finalizar</button>
+        </div>
       </div>
     </div>
   );
