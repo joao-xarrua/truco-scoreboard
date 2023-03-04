@@ -27,6 +27,11 @@ const Settings = ({ equipeUm, equipeDois, setEquipeUm, setEquipeDois }) => {
     }
   }
 
+  function handleResetar() {
+    setEquipeUm(0);
+    setEquipeDois(0);
+  }
+
   return (
     <div className={style.wrap}>
       <div className={style.interface}>
@@ -92,7 +97,9 @@ const Settings = ({ equipeUm, equipeDois, setEquipeUm, setEquipeDois }) => {
           </div>
         </div>
         <div className={style.navegacaoBase}>
-          <button className={style.resetar}>Resetar</button>
+          <button onClick={handleResetar} className={style.resetar}>
+            Resetar
+          </button>
           <button className={style.finalizar}>Finalizar</button>
         </div>
       </div>
