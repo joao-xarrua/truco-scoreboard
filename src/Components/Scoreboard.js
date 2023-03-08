@@ -18,7 +18,7 @@ const Scoreboard = () => {
         setEquipeUm={setEquipeUm}
         setEquipeDois={setEquipeDois}
       />
-      <Score />
+      <Score equipeUm={equipeUm} equipeDois={equipeDois} />
     </section>
   );
 };

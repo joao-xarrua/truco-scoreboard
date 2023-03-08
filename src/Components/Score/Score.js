@@ -1,7 +1,11 @@
 import React from "react";
+import { GlobalContext } from "../../GlobalContext";
 import style from "./Score.module.css";
 
-const Score = () => {
+const Score = ({ equipeUm, equipeDois }) => {
+  const { equipeUmGlobal, equipeDoisGlobal, totalDePontosGlobal } =
+    React.useContext(GlobalContext);
+
   return (
     <div className={style.wrap}>
       <h1 className="titulo-1">Placar</h1>
@@ -22,17 +26,17 @@ const Score = () => {
               fill="#eee"
             />
           </svg>
-          <span className={style.tituloEquipe}>Nós</span>
+          <span className={style.tituloEquipe}>{equipeUmGlobal}</span>
           <span className={`${style.vencendoEquipeUm} ${style.vencendo}`}>
             vencendo
           </span>
         </div>
         <div className={style.final}>
           <h3>final</h3>
-          <span>12</span>
+          <span>{totalDePontosGlobal}</span>
         </div>
         <div className={style.equipeDois}>
-          <span className={style.tituloEquipe}>Eles</span>
+          <span className={style.tituloEquipe}>{equipeDoisGlobal}</span>
           <svg
             width="48"
             height="48"
@@ -52,9 +56,9 @@ const Score = () => {
         </div>
       </div>
       <div className={style.pontos}>
-        <span>7</span>
+        <span>{equipeUm}</span>
         <div className={style.separador}></div>
-        <span>3</span>
+        <span>{equipeDois}</span>
       </div>
       <div className={style.historico}>
         <h3>Histórico</h3>
