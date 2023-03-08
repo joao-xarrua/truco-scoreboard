@@ -59,7 +59,6 @@ const Settings = ({ equipeUm, equipeDois, setEquipeUm, setEquipeDois }) => {
           <h2>Adicionar pontos</h2>
           <div className={style.botoesPontos}>
             <button onClick={() => handleAddPonto(1)}>
-              {equipeUm}
               <svg
                 width="72"
                 height="72"
@@ -77,7 +76,6 @@ const Settings = ({ equipeUm, equipeDois, setEquipeUm, setEquipeDois }) => {
               </svg>
             </button>
             <button onClick={() => handleAddPonto(2)}>
-              {equipeDois}
               <svg
                 width="72"
                 height="72"

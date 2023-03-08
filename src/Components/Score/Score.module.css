@@ -96,23 +96,25 @@
 
 .pontos {
   width: 100%;
-  display: flex;
   height: 100%;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
 .pontos span {
   font-family: var(--type-second);
   font-size: 15rem;
-  margin: 0px 40px;
   line-height: 1;
+  width: 50%;
+  text-align: center;
 }
 
 .separador {
   width: 2px;
-  height: 80%;
+  height: 260px;
   background: #aaa;
+  position: absolute;
 }
 
 .historico {
