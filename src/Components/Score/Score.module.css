@@ -118,6 +118,8 @@
 .historico {
   background: #333;
   width: 100%;
+  height: 132px;
+  max-width: 100%;
   padding: 20px;
   border-radius: 10px;
 }
@@ -125,15 +127,18 @@
 .historico h3 {
   color: #aaa;
   font-size: 1rem;
-  position: relative;
 }
 
 .historico h3::after {
   content: "";
-  width: 84%;
+  width: 70%;
   height: 2px;
   position: absolute;
   margin-top: 8px;
   margin-left: 10px;
   background: #aaa;
+}
+
+.historicoPontos svg {
+  margin: 0px 10px;
 }
