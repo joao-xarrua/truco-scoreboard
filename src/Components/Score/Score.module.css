@@ -1,0 +1,144 @@
+.wrap {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.wrap h1::after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  display: block;
+  margin: 20px auto 40px auto;
+  background: #aaa;
+}
+
+.equipes {
+  width: 100%;
+  background: red;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipeUm,
+.equipeDois {
+  display: grid;
+  grid-template-columns: 90px 90px;
+  grid-template-rows: 1fr 30px;
+  text-align: center;
+}
+
+.equipeUm svg {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.equipeDois svg {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.vencendoEquipeUm {
+  grid-column: 2;
+}
+
+.tituloEquipe {
+  font-family: var(--type-second);
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.vencendo,
+.perdendo {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.vencendo {
+  color: #4f772d;
+}
+
+.perdendo {
+  color: #be1515;
+}
+
+.final {
+  padding: 0px 40px;
+  text-align: center;
+}
+
+.final h3 {
+  font-family: var(--type-second);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.final span {
+  font-family: var(--type-second);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.pontos {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.pontos span {
+  font-family: var(--type-second);
+  font-size: 15rem;
+  margin: 0px 40px;
+  line-height: 1;
+}
+
+.separador {
+  width: 2px;
+  height: 80%;
+  background: #aaa;
+}
+
+.historico {
+  background: #333;
+  width: 100%;
+  height: 132px;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.historico h3 {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.historico h3::after {
+  content: "";
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 10px;
+  background: #aaa;
+}
+
+.historicoPontos svg {
+  margin: 0px 10px;
+}
